@@ -91,3 +91,9 @@ a {
   text-transform: uppercase;
 }
 /** #############  main-title Styles ############# **/
+
+@media screen and (max-width: 992px) {
+  .main-title h2 {
+    font-size: 5rem;
+  }
+}
