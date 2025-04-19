@@ -1,0 +1,112 @@
+<nav
+  [ngClass]="{ scrolled: scrolled }"
+  id="navbar"
+  class="navbar navbar-expand-lg shadow navbar-light bg-black fixed-top px-4 px-lg-5 py-lg-0"
+>
+  <div class="container">
+    <div class="navbar-brand">
+      <img
+        [src]="
+          scrolled == false ? '/images/logo.webp' : '/images/logo_black.webp'
+        "
+        alt="Digital Bond Logo"
+        class="logo-img"
+      />
+    </div>
+    <button
+      class="navbar-toggler d-lg-none border"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i
+        class="fas fa-bars fs-2"
+        [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+      ></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <div class="navbar-nav mx-auto">
+        <ul class="list-unstyled d-lg-flex align-items-center mt-lg-3">
+          <li>
+            <a class="nav-item active-link nav-link navelements">Home</a>
+          </li>
+          <li>
+            <a
+              [ngClass]="{ scrolled: scrolled }"
+              class="nav-item nav-link navelements"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              [ngClass]="{ scrolled: scrolled }"
+              class="nav-item nav-link navelements"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a [ngClass]="{ scrolled: scrolled }" class="nav-link navelements"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              [ngClass]="{ scrolled: scrolled }"
+              class="nav-item nav-link navelements"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-list">
+        <ul class="d-flex mt-lg-3 nav-icons list-unstyled">
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer">
+              <i
+                class="fab fa-instagram fw-bolder"
+                [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+              ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer">
+              <i
+                class="fab fa-facebook-f fw-bolder"
+                [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+              ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer">
+              <i
+                class="fab fa-linkedin-in fw-bolder"
+                [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+              ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer">
+              <i
+                class="fab fa-whatsapp fw-bolder"
+                [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+              ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer">
+              <i
+                class="fab fa-tiktok fw-bolder"
+                [ngClass]="scrolled == false ? 'text-white' : 'text-black'"
+              ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

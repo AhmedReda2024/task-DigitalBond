@@ -1,0 +1,62 @@
+nav {
+  transition: background-color 0.5s ease;
+}
+
+nav.scrolled {
+  background-color: white !important;
+}
+
+nav {
+  background-color: transparent;
+  padding: 10px;
+}
+
+.logo-img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.navelements {
+  color: #fff;
+  cursor: pointer;
+}
+
+a {
+  opacity: 1;
+  transition: opacity 0.3s, color 0.5s;
+}
+
+a:hover {
+  color: #ec2924;
+}
+a.active-link {
+  color: #ec2924;
+}
+a.scrolled {
+  text-decoration: none;
+  color: #040404;
+  opacity: 1;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+a.scrolled:hover {
+  color: var(--main-color);
+}
+
+.active-text {
+  color: var(--main-color);
+}
+.active-text.scrolled {
+  color: var(--main-color);
+}
+
+.nav-icons li a {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

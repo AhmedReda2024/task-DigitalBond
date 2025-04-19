@@ -1,0 +1,195 @@
+<div class="contact py-5" id="contact">
+  <div class="container">
+    <div class="main-title">
+      <h2>contact</h2>
+      <p>get in touch</p>
+    </div>
+
+    <div class="contact-area">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="contact-data" data-aos="fade-right">
+            <h3 class="text-capitalize m-0">address</h3>
+            <p>11 Ahmed Al Shatouri, Ad Doqi, Dokki, Giza Governorate 12611</p>
+
+            <ul class="contact-info list-unstyled">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a target="_blank" href="tel:+201021551322">
+                  +2 - 01021551322</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/CzEwRq3xaKR5srZc8"
+                >
+                  11 Ahmed Al Shatouri, Ad Dokki, Giza Governorate
+                </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  target="_blank"
+                  target="_blank"
+                  href="mailto:Bonder@digitalbondmena.com"
+                  >Bonder&#64;digitalbondmena.com</a
+                >
+              </li>
+            </ul>
+
+            <h3 class="text-capitalize">follow me</h3>
+
+            <ul class="contact-links list-unstyled">
+              <li>
+                <a href="https://facebook.com/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://google.com/">
+                  <i class="fab fa-google"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="contact-form" data-aos="fade-down">
+            <h3 class="text-capitalize m-0 mb-3">send us a note</h3>
+            <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
+              <div class="input-group mb-3">
+                <input
+                  class="form-control edited-btn"
+                  type="text"
+                  formControlName="name"
+                  placeholder="Name"
+                />
+
+                @if(contactForm.get('name')?.errors &&
+                contactForm.get('name')?.touched ) {
+                <div class="alert alert-danger w-100 p-2 rounded">
+                  @if(contactForm.get('name')?.getError('required') ) {
+                  <p class="m-0">Name is Required</p>
+                  } @else if (contactForm.get('name')?.getError('minlength')) {
+                  <p class="m-0">Name Should be more than or equal 3 chars</p>
+                  } @else if (contactForm.get('name')?.getError('maxlength')) {
+                  <p class="m-0">Name Should be less than or equal 20 chars</p>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  formControlName="email"
+                  placeholder="Email"
+                />
+
+                @if(contactForm.get('email')?.errors &&
+                contactForm.get('email')?.touched ) {
+                <div class="w-100 p-2 rounded alert alert-danger">
+                  @if(contactForm.get('email')?.getError('required') ){
+                  <p class="m-0">Email is required</p>
+                  } @else if (contactForm.get('email')?.getError('email')) {
+                  <p class="m-0">Enter Valid Email</p>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input-group mb-3">
+                <input type="tel" formControlName="phone" placeholder="Phone" />
+
+                @if(contactForm.get('phone')?.errors &&
+                contactForm.get('phone')?.touched ) {
+                <div class="w-100 p-2 rounded alert alert-danger">
+                  @if(contactForm.get('phone')?.getError('required') ){
+                  <p class="m-0">phone is required</p>
+                  } @else if (contactForm.get('phone')?.getError('pattern')) {
+                  <p class="m-0">Enter Valid phone</p>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  formControlName="subject"
+                  placeholder="Subject"
+                />
+
+                @if(contactForm.get('subject')?.errors &&
+                contactForm.get('subject')?.touched ) {
+                <div class="alert alert-danger w-100 p-2 rounded">
+                  @if(contactForm.get('subject')?.getError('required') ) {
+                  <p class="m-0">Subject is Required</p>
+                  } @else if (contactForm.get('subject')?.getError('minlength'))
+                  {
+                  <p class="m-0">
+                    Subject Should be more than or equal 3 chars
+                  </p>
+                  } @else if (contactForm.get('subject')?.getError('maxlength'))
+                  {
+                  <p class="m-0">
+                    Subject Should be less than or equal 50 chars
+                  </p>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input-group mb-3">
+                <textarea
+                  formControlName="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="tell us more about your needs..."
+                ></textarea>
+
+                @if(contactForm.get('message')?.errors &&
+                contactForm.get('message')?.touched ) {
+                <div class="alert alert-danger w-100 p-2 rounded">
+                  @if(contactForm.get('message')?.getError('required') ) {
+                  <p class="m-0">Message is Required</p>
+                  } @else if (contactForm.get('message')?.getError('minlength'))
+                  {
+                  <p class="m-0">
+                    Message Should be more than or equal 3 chars
+                  </p>
+                  } @else if (contactForm.get('message')?.getError('maxlength'))
+                  {
+                  <p class="m-0">
+                    Message Should be less than or equal 200 chars
+                  </p>
+                  }
+                </div>
+                }
+              </div>
+              <div class="contact-form-btn">
+                <button
+                  [disabled]="contactForm.invalid"
+                  type="submit"
+                  class="btn-main w-100 text-capitalize"
+                >
+                  send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

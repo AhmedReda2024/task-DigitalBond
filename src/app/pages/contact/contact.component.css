@@ -1,0 +1,73 @@
+/** ############# Contact Styles ############# **/
+
+.contact .contact-area h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.contact .contact-area .contact-data p {
+  max-width: 50%;
+  color: #4c4d4d;
+  padding-block: 10px;
+}
+.contact .contact-area .contact-data .contact-info {
+  padding-bottom: 10px;
+}
+.contact .contact-area .contact-data .contact-info li {
+  padding-block: 3px;
+
+  color: #4c4d4d;
+}
+.contact .contact-area .contact-data .contact-info li i {
+  color: var(--main-color);
+  padding-right: 5px;
+}
+
+.contact .contact-area .contact-data .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 15px;
+}
+.contact .contact-area .contact-data .contact-links i {
+  color: var(--main-color);
+}
+
+.contact .contact-area .contact-form .input-group input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #b1b4b8;
+  outline: none;
+}
+.contact .contact-area .contact-form input::placeholder,
+textarea::placeholder {
+  font-family: inherit;
+  font-weight: bold;
+  color: #b1b4b8;
+}
+.contact .contact-area .contact-form textarea {
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #b1b4b8;
+  outline: none;
+  min-height: 150px;
+  max-height: 50px;
+  resize: vertical;
+  width: 100%;
+}
+
+.contact .contact-area .contact-form .form-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  transition: background-color 0.4s ease-in-out;
+}
+.contact .contact-area .contact-form .form-btn:hover {
+  background-color: #840707;
+}
+.edited-btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/** ############# Contact Styles ############# **/
